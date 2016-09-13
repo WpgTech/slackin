@@ -9,6 +9,7 @@ WorkingDirectory=/opt/slackin
 ExecStartPre=/usr/local/bin/docker-compose build
 ExecStart=/usr/local/bin/docker-compose up --force-recreate
 ExecStop=/usr/local/bin/docker-compose down
+TimeoutSec=600
 
 [Install]
 WantedBy=default.target
