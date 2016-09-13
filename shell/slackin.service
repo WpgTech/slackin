@@ -1,0 +1,14 @@
+[Unit]
+Description=Slack Auto Invitation App
+Requires=docker.service
+After=docker.service
+BindsTo=docker.service
+
+[Service]
+WorkingDirectory=/opt/slackin
+ExecStartPre=/usr/local/bin/docker-compose build
+ExecStart=/usr/local/bin/docker-compose up --force-recreate
+ExecStop=/usr/local/bin/docker-compose down
+
+[Install]
+WantedBy=default.target
