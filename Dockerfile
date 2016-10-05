@@ -6,8 +6,6 @@ ADD . /srv/www
 
 WORKDIR /srv/www
 
-ENV NODE_ENV production
-
 RUN npm install -g npm@3
 
 RUN npm install --unsafe-perm
