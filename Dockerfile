@@ -6,6 +6,8 @@ ADD . /srv/www
 
 WORKDIR /srv/www
 
+ENV NODE_ENV production
+
 RUN npm install --unsafe-perm
 
 EXPOSE 3000
